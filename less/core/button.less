@@ -1,0 +1,85 @@
+.btn{	
+	display: inline-block;
+	padding: 6px 12px;
+	border: 1px solid #dfdfdf;
+	background-color: #fff;
+	border-radius: 2px;
+	vertical-align: middle;	
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	.text-truncate;
+	&:focus,
+	&:active{
+		outline: none;			
+	}	
+	&.sm{
+		padding: 1px 6px;
+	}
+	&.md{
+		padding: 4px 10px;
+	}
+	&.lg{
+		padding: 8px 14px;
+	}
+	&.@{ns}active{
+		border: 1px solid #FF5D19;
+		background-color: #FF5D19;
+		color: #fff;
+	}
+	&.disabled{
+		background: #f0f0f0!important;		
+		cursor: default!important;
+	}
+}
+
+.createBtn(@bgColor, @borderColor, @color: #fff){
+	.btn;
+	background: @bgColor;
+	border: 1px solid @borderColor;
+	color: @color;
+	&:not(.disabled):hover{
+		background-color: lighten(@bgColor, 5%);
+	}
+	&:not(.disabled):active{
+		background-color: darken(@bgColor, 5%);
+	}
+}
+
+.btn-primary{
+	.createBtn(#FE4B00, #FE4B00, #fff);	
+}
+.btn-success{
+	.createBtn(#57a2d1, #57a2d1);	
+}
+.btn-info{
+	.createBtn(#57a2d1, #57a2d1);	
+}
+.btn-warning{
+	.createBtn(#f0ad4e, #f0ad4e);
+}
+.btn-error{
+	.createBtn(#d9534f, #d9534f);
+}
+
+.btn-block{
+	display: block!important;
+	width: 100%;
+}
+
+// 一排显示
+// 手机上最多2个按钮
+.btn-row{
+	display: table;
+	// border-spacing: 10px 5px;
+	border-spacing: 10px 0;
+	width: 100%;
+	>*{
+		display: table-cell;
+		width: 50%;
+	}
+}
+
+.ui-btn-group input.hide{
+	display: none!important;
+}

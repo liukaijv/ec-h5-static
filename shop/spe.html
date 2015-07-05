@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<title>test</title>
+	<meta name="description" content="">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<meta http-equiv="cleartype" content="on">	
+
+	<script src="../js/lib/holder.js"></script>
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/main.min.js"></script>	
+	<link rel="stylesheet" href="../css/font-awesome.min.css">		
+	<link rel="stylesheet" href="../css/main.min.css">
+</head>
+<body>
+
+	<header class="ui-header">
+		<a href="#" class="ui-header-btn icon-pure-back left"></a>
+		<div class="ui-title">选择规格和数量</div>		
+	</header>	
+
+	<div class="list-block">
+		<ul class="product-list mode-list">
+			<li>
+				<div class="item-media">
+					<img src="http://img06.taobaocdn.com/bao/uploaded/i6/T1LXOgXmhlXXXO03fa_120859.jpg">
+				</div>
+				<div class="item-inner">
+					<div class="item-title">正品Dior迪奥香水女士小样甜心小姐粉红魅惑 真我淡香纯香</div>
+					<div class="item-extra">
+						<span class="price-sale mr5">¥<strong>252.00</strong></span>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="p10 bg-gray">
+		<dl class="flex-row">
+			<dt class="mr10">
+				<span class="badge bg-orange">团购</span>
+			</dt>
+			<dd class="flex">
+				团购剩余时间：9小时0分43秒，数量有限，赶紧下手哦。
+			</dd>
+		</dl>
+		<dl class="flex-row mt10">
+			<dt class="mr10">
+				<span class="badge bg-green">赠品</span>
+			</dt>
+			<dd class="flex">
+				美（PURE&MILD）植物美白精华
+			</dd>
+		</dl>
+	</div>
+
+	<script>
+	$(function(){
+		$('[name="size"]').on('change', function(){
+			var _this = $(this);
+			console.log(_this.prop('checked'));
+			console.log($('[name="size"]:checked').length);			
+		});
+	})
+	</script>
+
+	<ul class="spe-list">
+		<li>
+			<div>尺码：M</div>
+			<div class="mt10 ui-btn-group">
+				<span class="btn mr5" data-role="button">
+					M
+					<input type="radio" class="hide" disabled value="M" name="size">
+				</span>
+				<span class="btn mr5" data-role="button">
+					L
+					<input type="radio" class="hide"  value="L"  name="size">
+				</span>
+				<span class="btn mr5" data-role="button">
+					XL
+					<input type="radio" class="hide" value="XL"  name="size">
+				</span>
+			</div>
+		</li>
+		<li>
+			<div>尺码：M</div>
+			<div class="mt10">
+				<span class="btn mr5">M</span>
+				<span class="btn mr5">L</span>
+				<span class="btn mr5">XL</span>
+			</div>
+		</li>
+		<li>
+			<div>尺码：M</div>
+			<div class="mt10">
+				<span class="btn mr5">M</span>
+				<span class="btn mr5">L</span>
+				<span class="btn mr5">XL</span>
+			</div>
+		</li>
+		<li>
+			<div>数量：2箱</div>
+			<div class="mt10">
+				<div class="num-spinner" data-trigger="spinner">
+					<a href="javascript:" class="down" data-spin="down"></a>
+					<input type="text" value="1" data-rule="quantity">
+					<a href="javascript:" class="up" data-spin="up"></a>
+				</div>
+				<span class="color-gray inblk">库存107件</span>
+			</div>
+		</li>
+	</ul>
+
+	<div class="fixed-btn-placeholder"></div>
+	<div class="fixed-btn-wrapper">
+		<a href="#" class="btn-buy-now">立即购买</a>
+		<a href="#" class="btn-add-cart">加入购物车</a>
+	</div>
+
+	<script>
+	$(function(){
+		$('.icon-collapse').on('click', function(){
+			$('.nav-item').toggleClass('active');
+			$(this).toggleClass('active');
+		});
+	})
+	</script>
+
+	<div class="menu-fixed">
+		<div class="nav-item">
+			<a href="#" class="icon-menu">首页</a>
+			<a href="#" class="icon-catlog">分类</a>
+			<a href="#" class="icon-cart">购物车</a>
+			<a href="#" class="icon-user">会员中心</a>
+		</div>
+		<a href="#" class="icon-collapse">收起</a>
+	</div>
+
+</body>
+</html>

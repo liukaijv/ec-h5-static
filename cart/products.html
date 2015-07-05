@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/main.min.js"></script>
+	<script src="../js/test.js"></script>	
+	<link rel="stylesheet" href="../css/font-awesome.min.css">	
+	<link rel="stylesheet" href="../css/main.min.css">
+</head>
+<body>
+
+  <!-- 加载提示 -->
+	<div class="ui-preloader">
+		<i class="ui-loading"></i>		
+	</div>
+
+	<!-- 头部 -->
+	<header class="ui-header">
+		<a href="#" class="ui-header-btn icon-pure-back left"></a>
+		<div class="ui-header-search">
+			<input type="text"  placeholder="搜索你想要的商品">	
+		</div>
+		<a href="#filterPanel" id="filterTrigger" class="ui-header-btn-sm right">筛选</a>
+	</header>	
+	<!-- /头部 -->
+
+	<!-- 商品筛选 -->
+	<div class="ui-header-secondary">
+		<ul class="tabs-nav">
+			<li class="active">
+				<a href="#">上架时间</a>
+			</li>
+			<li>
+				<a href="#">销量</a>
+			</li>
+			<li class="sortable">
+				<a href="#" class="desc">价格</a>
+			</li>
+			<li class="toggle-list">
+				<a href="javascript:">
+					<i class="icon icon-th"></i>				
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- /商品筛选 -->
+
+	<!-- scroll容器 -->
+	<div class="ui-iscroller" id="iscroller">
+		<div class="iwrapper">
+
+			<!-- 商品列表 -->
+			<ul class="ui-datalist mode-list" id="productList">
+			</ul>
+			<!-- /商品列表 -->
+
+			<!-- 刷新加载 -->
+			<div class="ui-refresh-down">
+				<span class="refresh-icon"></span>
+				<span class="refresh-label">上拉加载更多</span>
+			</div>
+			<!-- /刷新加载 -->
+
+		</div>
+	</div>
+	<!-- /iscroll容器 -->
+	
+</body>
+</html>

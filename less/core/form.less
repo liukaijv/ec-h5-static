@@ -1,0 +1,191 @@
+.form-group{
+	margin: 12px 0;	
+  .clearfix;
+  label{
+    display: block;
+    margin-bottom: 3px;
+  }
+	input{
+
+	}	
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea{  
+  display: block;
+  width: 100%;
+  padding: 6px 8px;   
+  vertical-align: middle;   
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  line-height: 20px;
+  background-color: #fff;
+  .transition(~"border-color .15s ease-in-out, box-shadow .15s ease-in-out"); 
+  
+  &:focus {
+    outline: 0;
+  }
+
+  &[disabled],
+  &[readonly]{
+    cursor: not-allowed;     
+  }
+  &.lg{
+    padding: 8px 10px; 
+  }
+  &.input-inline{
+    display: inline-block;
+  }
+}
+
+.form-row{
+  .display();
+  margin: 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  label{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 32px;
+    color: #666;
+    padding-left: 8px; 
+  }
+  textarea,
+  select,
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  .form-select{
+    .flex();
+    border: none;
+  }   
+}
+
+.form-select{  
+  display: block;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  line-height: 20px;
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  >span{
+    display: block;
+    position: relative;
+    padding-right: 15px;
+    &:after{
+      content: "";
+      right: 0;
+      top: 7px;      
+      position: absolute;
+      .caret-down(6px, #ccc);      
+    }    
+  }
+  select{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;    
+    -webkit-appearance: none;
+  }
+}
+
+// 单复选居中
+label{
+	display: inline-block;
+	vertical-align: middle;
+	input[type="radio"],
+  input[type="checkbox"]{
+		margin: -2px 0 1px 0;
+	}
+}
+
+// 单选框
+input[type="radio"]{  
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #dfdfdf;
+  // box-shadow: 0 1px 2px #dfdfdf inset;    
+  overflow: hidden;      
+  vertical-align: middle;    
+  -webkit-appearance: none;
+  outline: 0;      
+  border-radius: 50%;
+  &:after{
+  	content: "";
+  	position: absolute;
+  	display: none;
+  	left: 50%;
+  	top: 50%;
+  	width: 10px;
+  	height: 10px;
+  	.translate(-50%, -50%);
+  	border-radius: 50%;
+  	background-image: -webkit-gradient(linear,center top,center bottom,from(#78e31a),to(#58ba01));
+  	background-image: -moz-gradient(linear,center top,center bottom,from(#78e31a),to(#58ba01));
+  	background-image: gradient(linear,center top,center bottom,from(#78e31a),to(#58ba01));
+  }
+  &:checked:after{
+  	display: block;
+  }
+  &:disabled:after{
+  	display: block;
+  	background-image: -webkit-gradient(linear,center top,center bottom,from(#dfdfdf),to(#ccc));
+  	background-image: -moz-gradient(linear,center top,center bottom,from(#dfdfdf),to(#ccc));
+  	background-image: gradient(linear,center top,center bottom,from(#dfdfdf),to(#ccc));
+  }
+}
+
+// 复选框
+input[type="checkbox"]{
+  .box-sizing();
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #dfdfdf;
+  // box-shadow: 0 1px 2px #dfdfdf inset;    
+  overflow: hidden;      
+  vertical-align: middle;    
+  -webkit-appearance: none;
+  outline: 0;      
+  &:after{
+  	content: "";  	
+  	display: none;
+  	position: absolute;
+  	left: 2px;  
+  	top: 2px;
+  	width: 10px;
+  	height: 5px;  
+  	background-color: transparent;  	
+  	border-width: 3px;
+  	border-color: #58ba01;
+  	border-style: solid;
+  	border-top: none;
+  	border-right: none;
+  	.rotate(-45deg);
+  }
+  &:checked:after{
+  	display: block;
+  }
+  &:disabled:after{
+  	display: block; 
+  	border-color: #ddd; 
+  }
+}

@@ -1,0 +1,36 @@
+// avg-grid helper
+// tpl :
+//  <ul class="app-avg-list2">
+//   <li>
+//     <div class="list-inner">
+//       <div class="media"></div>
+//       <div class="cont"></div>
+//     </div>
+//   </li>
+// </ul>
+
+.make-avg-grid(@name, @counter){
+  .@{name}-avg-list@{counter} > li {
+    width: (100% / @counter);
+    .box-sizing();
+    &:nth-of-type(n) {
+      clear: none;
+    }
+    &:nth-of-type(@{counter}n+1) {
+      clear: both;
+    }
+  } 
+}
+// .make-avg-grid(@name: app, 1);
+// [class*="avg-list"] {
+//   display: block;
+//   padding: 0;
+//   margin: 0;
+//   list-style: none;
+//   .clearfix();
+//   > li {
+//     display: block;
+//     height: auto;
+//     float: left;
+//   }
+// }

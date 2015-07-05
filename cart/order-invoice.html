@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/main.min.js"></script>
+	<link rel="stylesheet" href="../css/font-awesome.min.css">		
+	<link rel="stylesheet" href="../css/main.min.css">
+</head>
+<body>
+
+	<header class="ui-header">
+		<a href="#" class="ui-header-btn icon-pure-back">				
+		</a>
+		<div class="ui-title">发票信息</div>		
+	</header>	
+	
+	<div class="p10">
+
+		<div class="form-group invoice-type-wprapper">
+			<label>			
+				<input type="radio" checked name="invoice_type"> 个人
+			</label>
+			<label>	
+				<input type="radio" name="invoice_type"> 单位
+			</label>
+		</div>
+
+		<div class="form-group">
+			<input type="text" placeholder="发票信息">
+		</div>
+
+		<div class="form-group">
+			<input type="text" placeholder="发票内容">
+		</div>	
+
+		<div class="form-group">
+			发票税率：6%
+		</div>
+		
+		<div class="form-group">	
+			<p class="color-red">
+				备注：如商品由第三方卖家销售，则发票由卖家开具并寄出
+			</p>
+		</div>	
+
+	</div>
+
+	<div class="btn-row">
+		<a href="#" class="btn">暂不开发票</a>
+		<a href="#" class="btn-primary">保存发票信息</a>
+	</div>	
+	
+
+</body>
+</html>

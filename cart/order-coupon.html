@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<script src="../js/lib/jquery.min.js"></script>
+	<script src="../js/main.min.js"></script>	
+	<link rel="stylesheet" href="../css/font-awesome.min.css">		
+	<link rel="stylesheet" href="../css/main.min.css">
+</head>
+<body>
+
+	<header class="ui-header">
+		<a href="#" class="ui-header-btn icon-pure-back">				
+		</a>
+		<div class="ui-title">使用优惠券</div>		
+	</header>	
+
+	
+	<div class="ui-tabs order-coupon-wrapper">	
+
+		<ul class="ui-tabs-nav">
+			<li class="ui-active">
+				<a href="#">选择已有的优惠券</a>
+			</li>
+			<li>
+				<a href="#">输入优惠券号码</a>
+			</li>
+		</ul>
+
+		<div class="ui-tabs-content">
+		
+			<div class="ui-tabs-panel ui-active">
+				<div class="form-group">
+					<label>
+						<input type="radio"  name="invoice_method" checked> 姬龙雪箱包旗舰店50元优惠券
+					</label>
+				</div>
+				<div class="form-group">
+					<label>
+						<input type="radio"  name="invoice_method"> 任我行100元优惠券
+					</label>
+				</div>
+			</div>
+
+			<div class="ui-tabs-panel">
+				<div class="form-group">				
+					<input type="text" class="lg"  placeholder="请输入优惠券号码">				
+				</div>			
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="btn-row">
+		<a href="#" class="btn">返回</a>
+		<a href="#" class="btn-primary">确定</a>
+	</div>	
+
+</body>
+</html>
