@@ -85,14 +85,15 @@
 			setTimeout(function() {
 				if (settings.prov != null) {
 					prov_obj.val(settings.prov);
-					cityStart();
+					prov_obj.trigger('change');
 					setTimeout(function() {
 						if (settings.city != null) {
-							city_obj.val(settings.city);
-							distStart();
+							city_obj.val(settings.city);							
+							city_obj.trigger('change');
 							setTimeout(function() {
 								if (settings.dist != null) {
-									dist_obj.val(settings.dist)
+									dist_obj.val(settings.dist);
+									city_obj.trigger('change');
 								}
 							}, 1)
 						}
